@@ -1,14 +1,33 @@
 public class ArrayCreation {
 
     public static double getAverage(double[] numbers) {
+        if (numbers.length >= 3) {
 
-       return 0.0; // Make sure to update this line. It is a temporary placeholder to avoid an error.
+            double results = (numbers[0] + ((numbers.length-1)/2) + numbers.length-1) / 3;
+double rounded= (int)(results+0.5);
+
+            return rounded; // Make sure to update this line. It is a temporary placeholder to avoid an error.
+        }
+        return 0.0;
     }
+
 
     public static String stringArray(String[] friends) {
 
-        return ""; // Make sure to update this line. It is a temporary placeholder to avoid an error.
+        if (friends.length == 5) {
+            int one = friends[0].length() ;
+            int two = friends[1].length() ;
+            int three = friends[2].length() ;
+            int four = friends[3].length() ;
+            int five = friends[4].length() ;
+
+            return "" + one + " " + two + " " + three + " " + four + " " + five;
+            // Make sure to update this line. It is a temporary placeholder to avoid an error.
+        } else {
+            return "";
+        }
     }
+
 
     public static String countryData() {
         String[] countries = {"China", "Egypt", "France", "South Korea", "Germany", "India", "Japan", "Ghana",
@@ -20,7 +39,8 @@ public class ArrayCreation {
         String[] languages = {"Mandarin", "Arabic", "French", "Korean", "German", "Hindi", "Japanese", "Akuapem Twi",
         "Swahili", "Spanish", "English", "French", "English"};
 
+        int pick= (int)(Math.random()*13);
 
-        return "";
+        return "The capital of "+countries[pick]+" is "+capitals[pick]+" and the primary language is "+languages[pick];
     }
 }
